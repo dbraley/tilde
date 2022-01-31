@@ -1,0 +1,2 @@
+# Go-Prompt
+This is a nifty little tool for building interactive prompts with suggestions. Pretty fun to play with. Used by a lot of great open source projects as well - rancher cli and kubicorn among them. c-bata also has a couple projects that use this that might be intersting to check out, kube-prompt and hg-prompt.
