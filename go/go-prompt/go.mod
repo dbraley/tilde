@@ -1,4 +1,4 @@
-module github.com/dbraley/tilde/go/go-promptgg
+module github.com/dbraley/tilde/go/go-prompt
 
 go 1.16
 
