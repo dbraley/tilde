@@ -1,0 +1,9 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["david.braley@gmail.com"]
+description = "hello world rust based wasm C@E project"
+language = "rust"
+manifest_version = 2
+name = "rust-demo"
+service_id = ""

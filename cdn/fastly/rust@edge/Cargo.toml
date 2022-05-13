@@ -1,0 +1,15 @@
+
+[dependencies]
+  fastly = "^0.8.0"
+
+[package]
+  authors = []
+  edition = "2018"
+  name = "rust-demo"
+  publish = false
+  version = "0.1.0"
+
+[profile]
+
+  [profile.release]
+    debug = 1
