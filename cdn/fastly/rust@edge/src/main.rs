@@ -13,6 +13,22 @@ use fastly::{mime, Error, Request, Response};
 
 #[fastly::main]
 fn main(req: Request) -> Result<Response, Error> {
+
+    printEnv("FASTLY_CACHE_GENERATION");
+    printEnv("FASTLY_CUSTOMER_ID");
+    printEnv("FASTLY_HOSTNAME");
+    printEnv("FASTLY_POP");
+
+    printEnv("FASTLY_REGION");
+    printEnv("FASTLY_SERVICE_ID");
+    printEnv("FASTLY_SERVICE_VERSION");
+    printEnv("FASTLY_TRACE_ID");
+    
+    let LOCAL = std::env::var("FASTLY_HOSTNAME").unwrap() == "localhost";
+    if LOCAL {
+        println!("I'm Testing Locally")
+    }
+
     // Filter request methods...
     match req.get_method() {
         // Allow GET and HEAD requests.
@@ -65,4 +81,8 @@ fn main(req: Request) -> Result<Response, Error> {
         _ => Ok(Response::from_status(StatusCode::NOT_FOUND)
             .with_body_text_plain("The page you requested could not be found\n")),
     }
+}
+
+fn printEnv(val: &str) {
+    println!("{}: {:?}", val, std::env::var(val));
 }
