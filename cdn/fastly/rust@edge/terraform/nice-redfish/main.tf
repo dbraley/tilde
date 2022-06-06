@@ -8,6 +8,7 @@ resource "fastly_service_compute" "demo" {
 
   package {
     filename = "${path.root}/../../pkg/rust-demo.tar.gz"
+    source_code_hash = filesha512("${path.root}/../../pkg/rust-demo.tar.gz")
   }
 
   backend {
