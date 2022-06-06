@@ -15,3 +15,6 @@ deploy apply:
 
 tail log-tail:
 	fastly log-tail
+
+fix:
+	cargo fmt

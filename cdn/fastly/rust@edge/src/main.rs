@@ -13,7 +13,6 @@ use fastly::{mime, Error, Request, Response};
 
 #[fastly::main]
 fn main(req: Request) -> Result<Response, Error> {
-
     printEnv("FASTLY_CACHE_GENERATION");
     printEnv("FASTLY_CUSTOMER_ID");
     printEnv("FASTLY_HOSTNAME");
@@ -23,7 +22,7 @@ fn main(req: Request) -> Result<Response, Error> {
     printEnv("FASTLY_SERVICE_ID");
     printEnv("FASTLY_SERVICE_VERSION");
     printEnv("FASTLY_TRACE_ID");
-    
+
     let LOCAL = std::env::var("FASTLY_HOSTNAME").unwrap() == "localhost";
     if LOCAL {
         println!("I'm Testing Locally")
