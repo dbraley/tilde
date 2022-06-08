@@ -2,6 +2,7 @@
 
 use fastly::http::{header, Method, StatusCode};
 use fastly::{mime, Error, Request, Response};
+use woothee::parser::Parser;
 
 /// The entry point for your application.
 ///
@@ -40,6 +41,20 @@ fn main(req: Request) -> Result<Response, Error> {
                 .with_body_text_plain("This method is not allowed\n"))
         }
     };
+
+    println!("About to parse UA");
+
+    if let Some(ua) = req.get_header_str("User-Agent") {
+        println!("User-Agent: {:?}", ua);
+        let parser = Parser::new();
+        if let Some(result) = parser.parse(&ua) {
+            println!("Result: {:?}", result);
+        } else {
+            println!("Failed to parse User-Agent!")
+        }
+    } else {
+        println!("Failed to get User-Agent!")
+    }
 
     // Pattern match on the path...
     match req.get_path() {

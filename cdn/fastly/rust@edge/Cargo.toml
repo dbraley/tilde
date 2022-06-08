@@ -1,6 +1,8 @@
 
 [dependencies]
   fastly = "^0.8.0"
+  uaparser = "0.6.0"
+  woothee = "0.13.0"
 
 [package]
   authors = []
