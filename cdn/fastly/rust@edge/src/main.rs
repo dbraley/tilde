@@ -1,7 +1,7 @@
 //! Default Compute@Edge template program.
 
 use fastly::http::{header, Method, StatusCode};
-use fastly::{mime, Error, Request, Response};
+use fastly::{mime, Dictionary, Error, Request, Response};
 use woothee::parser::Parser;
 
 /// The entry point for your application.
@@ -28,6 +28,12 @@ fn main(req: Request) -> Result<Response, Error> {
     if LOCAL {
         println!("I'm Testing Locally")
     }
+
+    let values = Dictionary::open("values");
+    let strings = Dictionary::open("strings");
+
+    println!("values[foo] = {:?}", values.get("foo"));
+    println!("strings[en.welcome] = {:?}", strings.get("en.welcome"));
 
     // Filter request methods...
     match req.get_method() {
