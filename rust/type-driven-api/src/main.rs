@@ -8,6 +8,10 @@ fn expensive_calculation(_n: &i32) {
 
 fn main() {
     let v = vec![1,2,3];
+    progress(v);
+}
+
+fn progress(v: Vec<i32>) {
     let mut i = 1;
     for n in v.iter() {
         println!("{}{}", CLEAR, "*".repeat(i));
