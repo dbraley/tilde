@@ -8,12 +8,18 @@ fn expensive_calculation(_n: &i32) {
 
 fn main() {
     let v = vec![1,2,3];
-    progress(v, expensive_calculation);
+    progress(v.iter(), expensive_calculation);
+
+    use std::collections::HashSet;
+    let mut h = HashSet::new();
+    h.insert(0);
+    progress(h.iter(), expensive_calculation)
 }
 
-fn progress<T>(v: Vec<T>, f: fn(&T)->()) {
+fn progress<T, Iter>(iter: Iter, f: fn(T)->())
+where Iter: Iterator<Item = T>{
     let mut i = 1;
-    for n in v.iter() {
+    for n in iter {
         println!("{}{}", CLEAR, "*".repeat(i));
         i += 1;
         f(n);
