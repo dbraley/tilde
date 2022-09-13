@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/rust/rust-in-action/hello/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/rust/rust-in-action/penguins/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cdn/fastly/rust@edge/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/rust/rust-in-action/hello/target" />
       <excludeFolder url="file://$MODULE_DIR$/rust/rust-in-action/penguins/target" />
       <excludeFolder url="file://$MODULE_DIR$/cdn/fastly/rust@edge/target/debug/build/proc-macro2-813c0fc726389ca7/out" />
@@ -59,6 +60,7 @@
       <excludeFolder url="file://$MODULE_DIR$/cdn/fastly/rust@edge/target/wasm32-wasi/release/build/typenum-191e1f04a53bdd74/out" />
       <excludeFolder url="file://$MODULE_DIR$/cdn/fastly/rust@edge/target/wasm32-wasi/release/build/typenum-d04df28d0d5df71c/out" />
       <excludeFolder url="file://$MODULE_DIR$/cdn/fastly/rust@edge/target/wasm32-wasi/release/build/woothee-fcc9206e18946b79/out" />
+      <excludeFolder url="file://$MODULE_DIR$/cdn/fastly/rust@edge/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

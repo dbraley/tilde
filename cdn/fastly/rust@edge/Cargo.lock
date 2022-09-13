@@ -70,9 +70,9 @@ dependencies = [
 
 [[package]]
 name = "fastly"
-version = "0.8.5"
+version = "0.8.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cda9049e4227a6eb29f44f539fda339d8ed783ee421cbae152694e51c0d1ad7e"
+checksum = "32320461110a3fa05a51c3710102ad513fa55d0ddc05da87f39c3f95f1e11d53"
 dependencies = [
  "anyhow",
  "bytes 0.5.6",
@@ -93,9 +93,9 @@ dependencies = [
 
 [[package]]
 name = "fastly-macros"
-version = "0.8.5"
+version = "0.8.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7924a1c03be098a2b8338ba46013b178a844e3df08cb2011793f9bcfb92c7f6a"
+checksum = "db96d4379d6dc28f8536ef77bb7482afb88a1c8b48c5b85adf92e6726592b01a"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -104,9 +104,9 @@ dependencies = [
 
 [[package]]
 name = "fastly-shared"
-version = "0.8.5"
+version = "0.8.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2ee55f605927c28e19cf95c9df9914decd3fe5cfcc035548bb13b7e207ac7a3f"
+checksum = "b9a0f708662c55ea42ba4da9326537c24944f2ec07f7901a391f2eed56a0a932"
 dependencies = [
  "bitflags",
  "http",
@@ -115,9 +115,9 @@ dependencies = [
 
 [[package]]
 name = "fastly-sys"
-version = "0.8.5"
+version = "0.8.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "83b14615b6593967e390ac5e7281f7c126b0547af5b77d71abc534322a963df8"
+checksum = "cc6c66d20606bd5d42160038a8e214418c45bb2dd2a33cf8495fad461872b508"
 dependencies = [
  "bitflags",
  "fastly-shared",
@@ -217,6 +217,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "once_cell"
+version = "1.13.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "18a6dbe30758c9f83eb00cbea4ac95966305f5a7772f3f42ebfc7fc7eddbd8e1"
+
+[[package]]
 name = "opaque-debug"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -227,6 +233,12 @@ name = "percent-encoding"
 version = "2.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d4fd5641d01c8f18a23da7b6fe29298ff4b55afcccdf78973b24cf3175fee32e"
+
+[[package]]
+name = "pin-project-lite"
+version = "0.2.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e0a7ae3ac2f1173085d398531c705756c94a4c56843785df85a60c1a0afac116"
 
 [[package]]
 name = "proc-macro2"
@@ -268,6 +280,7 @@ name = "rust-demo"
 version = "0.1.0"
 dependencies = [
  "fastly",
+ "tracing",
  "woothee",
 ]
 
@@ -389,6 +402,38 @@ name = "tinyvec_macros"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cda74da7e1a664f795bb1f8a87ec406fb89a02522cf6e50620d016add6dbbf5c"
+
+[[package]]
+name = "tracing"
+version = "0.1.35"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a400e31aa60b9d44a52a8ee0343b5b18566b03a8321e0d321f695cf56e940160"
+dependencies = [
+ "cfg-if",
+ "pin-project-lite",
+ "tracing-attributes",
+ "tracing-core",
+]
+
+[[package]]
+name = "tracing-attributes"
+version = "0.1.22"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "11c75893af559bc8e10716548bdef5cb2b983f8e637db9d0e15126b61b484ee2"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "tracing-core"
+version = "0.1.28"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7b7358be39f2f274f322d2aaed611acc57f382e8eb1e5b48cb9ae30933495ce7"
+dependencies = [
+ "once_cell",
+]
 
 [[package]]
 name = "typenum"
